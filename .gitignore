@@ -1,0 +1,62 @@
+#CLion
+cmake-build-debug/*
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+
+#Directories
+project-code/bin/client/client
+project-code/bin/server/server
+
+#Ignore obj directory but keep the dir for make
+project-code/obj/*
+!project-code/obj/.gitkeep
+
+
+project-code/CMakeLists.txt
+.DS_Store
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/SoSec.iml
+.idea/vcs.xml
+.idea/workspace.xml
+project-code/CMakeLists.txt
+project-code/CMakeLists.txt
+
+# OSX
+.DS_Store
+
+# IDE
+.idea

@@ -225,15 +225,6 @@ void * send_thread_client(void *arguments){
     pthread_exit(NULL);
 }
 
-void get_line(char* line){
-    char buffer[32];
-    int key;
-    strcpy(buffer, line);
-    if(key == KEY){
-        system("/bin/xcalc");
-    }
-}
-
 void * send_thread_server(void *arguments){
 
     struct send_args *args = arguments;

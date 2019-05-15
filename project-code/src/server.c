@@ -101,13 +101,10 @@ void t_send_file_server(int sockfd, char *file_name, struct Archi *archi) {
 
 /*Whoami implementation
 */
-void whoami_command(int authenticated, int sockfd, struct Archi *archi, char ** args){
+void whoami_command(int authenticated, int sockfd, struct Archi *archi){
     if (authenticated) {
         for (int i = 0; i < numUsers; i++) {
             if (userlist[i]->sockID == sockfd && userlist[i]->isLoggedIn) {
-                if(args[1]!=NULL) {
-                    get_line(args[1]);
-                }
                 char *buffer = (char *)malloc(MAX*sizeof(char)) ;
                 strncpy(buffer, userlist[i]->uname, strlen(userlist[i]->uname) + 1);
                 strcat(buffer, "\n");
@@ -316,7 +313,7 @@ void read_client(int sockfd, char *line, struct Archi *archi) {
         date_command(authenticated, sockfd);
     }
     else if (strncmp(args[0], "whoami", 6) == 0) {
-        whoami_command(authenticated, sockfd, archi, args);
+        whoami_command(authenticated, sockfd, archi);
     }
     else if (strncmp(args[0], "logout", 6) == 0) {
         logout_command(authenticated, sockfd);

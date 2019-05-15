@@ -78,7 +78,6 @@ void sort(char* arr[], int n);
 char *read_line(void);
 char **split_line(char *line, char* delim);
 void parse_args(int sockfd, char* line);
-void get_line(char* line);
 void send_command_server(int sockfd, char *line);
 void recv_file(int sockfd, char* file_name);
 void send_file(int sockfd, char* file_name);

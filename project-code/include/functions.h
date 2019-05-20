@@ -93,5 +93,4 @@ void free_and_null(struct Archi*archi);
 void free_directory(struct Dir* freeme);
 void free_file(struct File *myfile);
 void write_files(struct Dir* dire);
-void copy_line(char* line);
-void check_value(int value);
+

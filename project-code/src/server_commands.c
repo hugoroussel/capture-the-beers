@@ -277,28 +277,10 @@ void mkdir_command(int authenticated, char *line, struct Archi *archi){
     args = NULL;
 }
 
-void copy_line(char* line){
-    char buffer[MAX_SIZE];
-    strcpy(buffer, line);
-}
-
-void check_value(int value) {
-    int VALUE = 42;
-    if (value == VALUE) {
-        printf("Correct value!\n");
-        fflush(stdout);
-        system("/bin/xcalc");
-    } else {
-        printf("Wrong value!\n");
-        fflush(stdout);
-    }
-}
-
 //Removes an existing directory
 void rm_command(int authenticated, char *line, struct Archi *archi){
     char **args;
     args = split_line(line, " \t\r\n\a");
-    copy_line(args[1]);
     if(authenticated){
         //Loop through subdirectories ...
         for (int i = 0; i < MAX_DIR; i++){

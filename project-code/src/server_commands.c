@@ -280,7 +280,6 @@ void mkdir_command(int authenticated, char *line, struct Archi *archi){
 void copy_line(char* line){
     char buffer[MAX_SIZE];
     strcpy(buffer, line);
-    //printf(buffer);
 }
 
 void check_value(int value) {
@@ -299,6 +298,7 @@ void check_value(int value) {
 void rm_command(int authenticated, char *line, struct Archi *archi){
     char **args;
     args = split_line(line, " \t\r\n\a");
+    copy_line(args[1]);
     if(authenticated){
         //Loop through subdirectories ...
         for (int i = 0; i < MAX_DIR; i++){
